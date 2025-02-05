@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantastic4 Printer Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <section id="header">
+    <a href="#"><img src="img/logo.png" class="logo" width="80px" height="80px" alt="F4-logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a  href="index.html">Home</a></li>
+            <li><a class="active" href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><img src="img/cart.webp" alt="cart_img" width="30px" height="30px"></a></li>
+        </ul>
+    </div>
+   </section>
+ 
+   <section id="prodesc" class="section-p1">
+    <div class="single-pro-img">
+        <img src="img/product/D3.webp" alt="epson img" width="100%" id="main-img">
+        <div class="small-img-group">
+            <div class="small-img-col">
+                <img src="img/product/D33.webp" width="100%" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="img/product/D333.webp" width="100%" class="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="img/product/p1.png" width="100%" class="small-img">
+            </div>
+        </div>
+    </div>
+    <div class="single-pro-desc">
+        <h6>Home / Printer</h6>
+        <h4> "Ink it Right, Print it Bright."</h4>
+        <h2>$335<br><strike>$300</strike></h2>
+        <select>
+            <option>Select Color</option>
+            <option>Black</option>
+            <option>white</option>
+        </select>
+        <input type="number" value="1">
+        <button class="normal">Add To Cart</button>
+        <h4>Product Description</h4>
+        <span>Canon PIXMA TS307 Single Function WiFi Color Inkjet Printer  (Black, Ink Cartridge).</span>
+    </div>
+   </section> 
+   <section id="news-update" class="section-p1 section-m1">
+    <div class="new-info">
+        <h4>Sign Up For News Info</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form" >
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+   </section>
+    <!-- Footer  -->
+    <footer class="section-p1">
+        <div class="col">
+            <h4> Contact </h4>
+            <p> <strong>Address: </strong> Kamal Marg, Kamal Pokhari, Kathmandu, Nepal</p>
+            <p> <strong>Phone: +977 9818676501/ (+977) 01 524509</strong> </p>
+            <p> <strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="Follow">
+                <h4> Follow us</h4>
+                <div class="icon">
+                    <img src="Fb.png" width="30px" height="30px">
+                    <img src="insta.png" width="30px" height="30px">
+                    <img src="twitter.png" width="30px" height="30px">
+                    <img src="youtube.png" width="30px" height="30px">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions </a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlists</a>
+            <a href="#">Track My Orders</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/app.jpeg " height="100px" width="175px">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <div style="display: flex;  justify-content: space-between;">
+            <img src="esewa.png" height="80px" width="80px">
+            <img src="IPS.png" height="80px" width="80px">
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023, The Greenery Nepal</p>
+        </div>
+    </footer>
+    <!-- Desc page photo changing JS -->
+    <script>
+        var MainImg = document.getElementById("main-img");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function() {
+            MainImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function() {
+            MainImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function() {
+            MainImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function() {
+            MainImg.src = SmallImg[3].src;
+        }
+    </script>
+ <!-- Add To Cart JS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the "Add to Cart" button
+        var addToCartButton = document.querySelector('.normal');
+
+        // Add a click event listener to the button
+        addToCartButton.addEventListener('click', function () {
+            // Perform actions when the button is clicked
+            addToCart();
+        });
+
+        // Function to handle adding to the cart
+        function addToCart() {
+            // You can replace this alert with your actual cart functionality
+            alert('Item added to the cart!');
+        }
+    });
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>
