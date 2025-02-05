@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <!-- Page title -->
+    <title>Team CVs</title>
+    <!-- Internal styles for the page -->
+    <style>
+        /* General styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+
+        }
+        /* Styling for the header section */
+        header {
+            background: grey;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        /* Styling for team member cards */
+        .team-member {
+            background: black;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 8px;
+        }
+        /* Styling for CV details */
+        .cv {
+            display: none;
+            margin-top: 1em;
+            background-color: white;
+        }
+        
+        /* Styling for team member photos */
+        .cv-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Styling for the main content container */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+         /* Styling for the feedback form */
+        .feedback-form {
+            width: 40%;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+         /* Styling for the team list section */
+        .team-list {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        /* Styling for individual team members in the list */
+        .team-member {
+            flex-basis: calc(50% - 10px);
+            padding: 10px;
+            background: #eeeeee;
+            border-radius: 5px;
+        }
+        /* Styling for form input elements */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+        /* Styling for the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        /* Styling for team member container */
+        .team-member container {
+            display: flex;
+        }
+        /* Styling for general container */
+        .container {
+            display: flex;
+        }
+        /* Styling for team member background color */
+        .team-member {
+            background-color: gray;
+        }
+        /* Styling for feedback form background color */
+        .feedback-form {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section with navigation links -->
+    <section id="header">
+         <!-- Logo image -->
+        <a href="#"><img src="img/logo.png" style=" border-radius: 50%;" class="logo" width="100px" height="80px"alt="F4-logo"></a>
+        <div>
+            <ul id="navbar">
+                <!-- Navigation links with active class on 'About' -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a class="active" href="cv.html">About</a></li>
+                <li><a href="cart.html"><img src="img/cart.webp" alt="cart_img" width="30px" height="30px"></a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- Main header with team title -->
+    <header>
+        <h1>Our Team</h1>
+    </header>
+    <div>
+         <!-- Main content container -->
+        <div class="container">
+            <!-- Feedback form section -->
+            <div class="feedback-form" width="63%">
+                <h2>Feedback Form</h2>
+                <!-- Feedback form markup -->
+                <form action="/submit-feedback" method="post">
+                    <!-- Form input fields -->
+                    <input type="text" id="fname" name="firstname" placeholder="First name">
+                    <input type="text" id="lname" name="lastname" placeholder="Last name">
+                    <input type="text" id="address" name="address" placeholder="Address">
+                    <input type="email" id="email" name="email" placeholder="Email address">
+                    <textarea id="opinion" name="opinion" placeholder="Enter your opinions here..."></textarea>
+                    <!-- Submit button -->
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <!-- Team member section -->
+            <section id="team" width="20%">
+                <!-- Member 1 -->
+                <article class="team-member" style="background-color: gray;">
+                    <h2>Nehal Mehta</h2>
+                    <button onclick="toggleCV('cv1')">Show/Hide CV</button>
+                    <!-- CV details for Nehal Mehta -->
+                    <div class="cv" id="cv1" style="padding: 20px;">
+                        <!-- Profile photo -->
+                        <img src="img/nehal.jpg" height="150px" width="150px" style=" border-radius: 50%;" alt="Nehal"
+                            class="cv-photo">
+                            <!-- Personal information -->
+                        <h3>Nehal Mehta</h3>
+                        <p>Position: front-end Develooper</p>
+                        <p>Email: nehalmehta@567@gmail.com</p>
+                        <p>Phone: 98263039600</p>
+                        <!-- Profile details -->
+                        <h4>Profile</h4>
+                        <p>Networking and IT security student. Consider my self a responsible and orderly person.<br>
+
+                            Always eager to learn new things and to gain experiences.<br>
+
+                            I am looking forward for my first work experience .</p>
+                            <!-- Skills -->
+                        <h4>Skills</h4>
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>React, Node.js</li>
+                            <li>Database Management</li>
+                        </ul>
+                         <!-- Work experience -->
+                        <h4>Experience</h4>
+                        <p>Senior Developer at TechCorp (2015-Present)</p>
+                        <p>Web Developer at WebSolutions (2010-2015)</p>
+                        <!-- Education details -->
+                        <h4>Education</h4>
+                        <p>
+
+                            BSc NETWORKING AND IT SECURITY ISLINGTON COLLEGE KATHMANDU<br>
+
+                            SECONDARY SCHOOL 3.59 GPA BAL KALYAN VIDHYA MANDIR HSS<br>
+
+                            Primary School 3.85 GPA Bal Kalyan Vidhya Mandir HSS</p>
+                    </div>
+                </article>
+                <!-- Member 2 -->
+                <article class="team-member">
+                    <h2>Gopal Chaudhary</h2>
+                    <button onclick="toggleCV('cv2')">Show/Hide CV</button>
+                    <!-- CV details for Gopal Chaudhary -->
+                    <div class="cv" id="cv2" style="padding: 20px;">
+                         <!-- Profile photo -->
+                        <img src="img/gopal.jpg" height="150px" width="150px" style=" border-radius: 50%;" alt="Gopal"
+                            class="cv-photo">
+                            <!-- Personal information -->
+                        <h3>Gopal Chaudhary</h3>
+                        <p>Position: Working As A NOC in CG communication</p>
+                        <p>Email: chygopal101@gmail.com</p>
+                        <p>Phone: 9817710860</p>
+                        <!-- Profile details -->
+                        <h4>Profile</h4>
+                        <p>I am a person with knowledgeable about technology and running my Bachelor in <br>
+                            Networking and Cyber Security. I am passionate about
+                            consistently advancing my knowledge and skills.<br> I have
+                            attended multiple seminars and boot camps on Cyber
+                            Security. and working<br> as the NOC in the CG Internet
+                            from last 1 year </p>
+                            <!-- Skills -->
+                        <h4>Skills</h4>
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>Networking</li>
+                            <li>Database Management</li>
+                        </ul>
+                         <!-- Work experience -->
+                        <h4>Experience</h4>
+                        <p> NOC in CG communication (2022-Present)</p>
+                        <!-- Education details -->
+                        <h4>Education</h4>
+                        <p>BSc NETWORKING AND IT SECURITY ISLINGTON COLLEGE KATHMANDU<br>
+
+                            SECONDARY SCHOOL 2.80 Liverpoll INT COLLEGE<br>
+
+                            Primary School 3.50 GPA Apollo Om HSS</p>
+                    </div>
+                </article>
+                <!-- Member 3 -->
+                <article class="team-member" style="background-color: gray;">
+                    <h2>Nikita Bhandari</h2>
+                    <button onclick="toggleCV('cv3')">Show/Hide CV</button>
+                    <!-- CV details for Nikita Bhandari -->
+                    <div class="cv" id="cv3" style="padding: 20px;">
+                        <!-- Profile photo -->
+                        <img src="img/nikita.jpeg" height="150px" width="150px" style=" border-radius: 50%;" alt="Nikita"
+                            class="cv-photo">
+                             <!-- Personal information -->
+                        <h3>Nikita Bhandari</h3>
+                        <p>Email: chhetrinikita@gmail.com</p>
+                        <p>Phone: 9800711792</p>
+                        <!-- Profile details -->
+                        <h4>Profile</h4>
+                        <p>Hardworking and passionate 1st year networking and IT security student.<br>
+                            Applies education to learn new skills. <br>
+                            Strong creative and analytical skills.<br>
+                            Passionate about graphic designing .</p>
+                            <!-- Skills -->
+                        <h4>Skills</h4>
+                        <ul>
+                            <li>HTML, CSS, JavaScrpit</li>
+                            <li>Graphic designing</li>
+                            <li>Wireframe Creation</li>
+                            <li>Cooking</li>
+                            <li>Proficient in MS Office</li>
+                        </ul>
+                        <!-- Work experience -->
+                        <h4>Experience</h4>
+                        <p>No work experience.</p>
+                        <!-- Education details -->
+                        <h4>Education</h4>
+                        <p>
+
+                            Primary School
+                            Siddhartha English Boarding Secondary School 3.60<br>
+                            Secondary School
+                            Siddhartha College 3.54<br>
+                            BSc Networking and IT Security
+                            Islington College
+                </article>
+                <!-- Member 4 -->
+                <article class="team-member">
+                    <h2>Biraj Tuladhar </h2>
+                    <button onclick="toggleCV('cv4')">Show/Hide CV</button>
+                    <!-- CV details for Biraj Tuladhar -->
+                    <div class="cv" id="cv4" style="padding: 20px;">
+                        <!-- Profile photo -->
+                        <img src="img/biraj.jpg" alt="Biraj" class="cv-photo">
+                        <!-- Personal information -->
+                        <h3>Biraj Tuladhar</h3>
+                        <p>Position: student</p>
+                        <p>Email: birajt1095@gmail.com</p>
+                        <p>Phone: 9841078503</p>
+                        <!-- Profile details -->
+                        <h4>Profile</h4>
+                        <p>Networking and IT security student. Consider my self a responsible and orderly person.<br>
+
+                            Always eager to learn new things and to gain experiences.<br>
+
+                            I am looking forward for my first work experience .</p>
+                             <!-- Skills -->
+                        <h4>Skills</h4>
+                        <ul>
+                            <li>Problem Solving</li>
+                            <li>Adaptability</li>
+                            <li>Strong Work Ethic</li>
+                            <li>Time Management</li>
+                            <li>Handling Pressure</li>
+                        </ul>
+                         <!-- Work experience -->
+                        <h4>Experience</h4>
+                        <p> Seeking a challenging career with a progressive organization that provides an opportunity to
+                            capitalize my technical skills & abilities in the field of information technology (IT).</p>
+                            <!-- Education details -->
+                        <h4>Education</h4>
+                        <p>School Name: Saraswati.B.High.School<br>
+                            Qualification: S.E.E<br>
+                            Graduation Year: 2017 A.D<br>
+                            GPA: 3.35<br>
+
+                            College Name: KIST College<br>
+                            Qualification: S.L.C<br>
+                            Graduation Year: 2019 A.D<br>
+                            CGPA: 2.81
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <!-- Footer  -->
+        <footer class="section-p1">
+            <!-- Contact and Information -->
+            <div class="col">
+                <h4> Contact </h4>
+                <p> <strong>Address: </strong> Kamal Marg, Kamal Pokhari, Kathmandu, Nepal</p>
+                <p> <strong>Phone: +977 9818676501/ (+977) 01 524509</strong> </p>
+                <p> <strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+                <div class="Follow">
+                    <h4> Follow us</h4>
+                    <!-- social media links -->
+                    <div class="icon">
+                        <img src="img/Fb.png" width="30px" height="30px">
+                        <img src="img/insta.png" width="30px" height="30px">
+                        <img src="img/twitter.png" width="30px" height="30px">
+                        <img src="img/youtube.png" width="30px" height="30px">
+                    </div>
+                </div>
+            </div>
+            <!-- Links about the website and policies -->
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions </a>
+                <a href="#">Contact Us</a>
+            </div>
+            <!-- My Account section with links -->
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlists</a>
+                <a href="#">Track My Orders</a>
+                <a href="#">Help</a>
+            </div>
+            <!-- Images and information about installing the app -->
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="img/app.jpeg " height="100px" width="175px">
+
+                </div>
+                <!-- Information about payment system -->
+                <p>Secured Payment Gateways</p>
+                <img src="img/esewa.png" height="80px" width="80px">
+            </div>
+            <!-- Copyright information -->
+            <div class="copyright">
+                <p>© 2024, The Greenery Nepal</p>
+            </div>
+        </footer>
+        <!-- Script tag for external JavaScript file -->
+        <script src="script.js"></script>
+        <script>
+            function toggleCV(cvId) {
+                var cv = document.getElementById(cvId);
+                cv.style.display = cv.style.display === 'block' ? 'none' : 'block';
+            }
+                function feedbackform() {
+                  var emailInput = document.getElementById('email');
+                  var emailValue = emailInput.value.trim();
+                  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              
+                  if (emailValue === '' || !emailRegex.test(emailValue)) {
+                    alert('Please enter a valid email address');
+                    return false; // Prevent form submission
+                  }
+              
+                  // You can add more validation rules if needed
+              
+                  // If the form is valid, you can submit it
+                  return true;
+                }
+        </script>
+</body>
+
+</html>
