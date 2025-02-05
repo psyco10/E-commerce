@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>My Personal Blog</title>
+    <!-- Internal CSS styles -->
+    <style>
+        /* General styling for the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Container styling */
+        .container {
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            overflow: hidden;
+
+        }
+
+        /* Styling for individual blog articles */
+        .article {
+            padding: 15px;
+            background: #fff;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        /* Styling for article images with hover effect */
+        .article img {
+            height: 300px;
+            width: 400px;
+            border-radius: 20px;
+            padding-left: 270px;
+            transition: transform 2s ease-in-out;
+        }
+        /* Hover effect for images within elements with the class 'article' */
+        .article img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Styling for the meta information in articles */
+        .article h2 {
+            margin-bottom: 0;
+        }
+        /* Styles for elements with the class 'meta' within elements with the class 'article' */
+        .article .meta {
+            font-style: italic;
+            color: #aaa;
+        }
+
+        /* Styling for the footer */
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+            width: 100%;
+        }
+        /* Styles for columns within the footer */
+        footer .col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        /* Styles for the logo within the footer */
+        footer .logo {
+            margin-bottom: 30px;
+        }
+        /* Styles for heading 4 within the footer */
+        footer h4 {
+            font-size: 14px;
+            padding-bottom: 20px;
+        }
+        /* Styles for paragraphs within the footer */
+        footer p {
+            font-size: 13px;
+            margin: 0 0 8px 0;
+        }
+        /* Styles for links within the footer */
+        footer a {
+            font-size: 13px;
+            text-decoration: none;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        /* Styles for the 'follow' section within the footer */
+        footer.follow {
+            margin-top: 20px;
+        }
+        /* Styles for icons within the footer */
+        footer .icon {
+            color: #465b52;
+            padding-right: 4px;
+            cursor: pointer;
+        }
+        /* Styles for images within the 'install' section of the footer */
+        footer .install .row img {
+            border: 1px solid #088178;
+            border-radius: 6px;
+        }
+        /* Styles for images within the 'install' section of the footer */
+        footer .install img {
+            margin: 10px 0 15px 0;
+        }
+        /* Hover effect for images within the 'follow' section of the footer */
+        footer .follow .icon img:hover {
+            color: #088178;
+        }
+        /* Hover effect for links within the footer */
+        footer a:hover {
+            color: #088178;
+        }
+        /* Styles for the copyright section within the footer */
+        footer .copyright {
+            width: 100%;
+            text-align: center;
+        }
+        /* Styles for elements with the class 'section-p1' */
+        .section-p1 {
+            background-color: white;
+        }
+
+        /* General styling for the header section */
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background: rgb(131, 81, 188);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            z-index: 999;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        /* Navigation bar styling */
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        /* Styles for list items within the navbar */
+        #navbar li {
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+            font-size: larger;
+        }
+        /* Styles for anchor links within list items in the navbar */
+        #navbar li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+        /* Hover and active styles for anchor links in the navbar */
+        #navbar li a:hover,
+        #navbar li a.active {
+            color: rgb(47, 5, 5);
+        }
+        /* Styles for the pseudo-element '::after' on hover and active anchor links */
+        #navbar li a.active::after,
+        #navbar li a:hover::after {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background: rgb(47, 5, 5);
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+        }   
+    </style>
+</head>
+<body>
+   <!-- Header section -->
+   <section id="header">
+    <!-- Shop Logo -->
+   <a href="#"><img src="img/logo.png" style=" border-radius: 50%;"  class="logo" width="80px" height="80px" alt="F4-logo"></a>
+   <!-- Navigation bar -->
+   <div>
+       <ul id="navbar">
+           <!-- Navigation links with active class on 'Home' -->
+           <li><a href="index.html">Home</a></li>
+           <li><a href="shop.html">Shop</a></li>
+           <li><a class="active" href="blog.html">Blog</a></li>
+           <li><a href="research.html">Research</a></li>
+           <li><a href="Aboutus.html">About</a></li>
+           <li><a href="cart.html"><img src="img/cart.webp" alt="cart_img" width="30px" height="30px"></a></li>
+       </ul>
+   </div>
+  </section>
+
+    <div class="container">
+        <!-- Blog Post 1 -->
+        <article class="article">
+            <h2><b>Introduction</b></h2>
+            <div class="meta"><img src="img/tec.webp"></div>
+            <p>Technology can be defined as the implementation of scientific knowledge,tools that is created by humans to
+                enchance human needs.In this globalized world,technology is exposed to everyone.Technology has
+                revolutionized daily lives,business by giving access to mutilple tools. Technology is a basic requirement for all the business ,and can be taken as a conrnerstone of management and development of business.Technology has facilitate business to to interact with the audience customers in a very fruitful and personal way than before. Some of the key ways on how
+                technology have affectes our daily lives,business and our printing business includes:</p>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="article">
+            <h2><b>Postive impact of Technology:</b></h2>
+            <div class="meta"><img src ="img/tec1.jpg"></div>
+            <p> <br>
+                There are a lot of postive impacts of technology , which includes the following things:<br>
+                <br>
+                <b> 1.Increased communication:</b> Digital communication tools such as emails,social media sites,
+                internet are very usefull in business as they help connect customers and potential clients.Thanks to the
+                advancement in technology it is easier for the printing business to communicate and get proper feedback with
+                the respective customers.<br>
+                <br>
+                <b>2.Greater access to information:</b>The modern technology has advanced on how the information is being
+                exchanged withing the business.Technology has provided printing business access to multiple information that
+                helps to uplift the business and work on lackings of the business.<br>
+                <br>
+                <b>3.Expand market reach:</b>Technology enables business to reach wider range of consumers, increasing
+                market reach.Our printing business has also effectively used technology i.e social media sites such as
+                Instagram, Facebook to advertise the business which means numerous people are going to visit our website and
+                it will automatically increase the sales of the printing business. <br>
+                <br>
+                <b>4.Increases productivity:</b>Technology usually streamlines the process of the business which eventually reduces the effort and time needed for the task.It helps to reduce the overhead costs of the business promoting the
+                business growth.Through which, productivity of our printing business will be improved.<br>
+                <br>
+                <b>5.Remote work flexibility:</b>With the usefullness of technology,co-workers can hang out within
+                themselves regardless the distance due to the use of the internet.Technology has made company like Printer
+                Seller, operate through remote areas broaddening the pools of talents.
+    </p>
+        </article>
+        <!-- Blog Post 2 -->
+        <article class="article">
+            <h2><b>Negative impact of Technology:</b></h2>
+            <div class="meta"><img src="img/tec2.jpg"></div>
+            <p>
+                There are a lot of negative impact of technology, which includes the following things:<br>
+                <br>
+                <b>1.Cost of implementation:</b>With time, The technology must be upgraded and well maintained inorder to be
+                competitive in the business world.Maintaining and keeping up with the new technology trends can be expensive
+                , Especially for new business like Printer sellers.It increases the cost of production.<br>
+                <br>
+                <b>2.Dependence of technology</b>Today, dependence on technology is a major concern for business.Even a
+                small technical glitch can halt the business.For instance ,Our printing business might be at a difficult 
+                condition if there is a problem in the web server.<br>
+                <br>
+                <b>3.Social isolation:</b>Another, drawbacks of technology is that there is loss of personal touch.With the excessive dependence on technology for communication in printing business, it has resulted into lack of interpersonal skills and social isolation between customers.<br>
+                <br>
+                <b>4.Cybersecurity risk:</b>Over reliance in technology introduces vulnerabilities to breaches, cyberattacks, lack of privacy,
+                loss of sensitve data.Printing business also has to invest in proper Cybersecurity inorder to mitigate cyberattacks and data breaches.<br>
+                <br>
+                <b>5.Competitive:</b>Online business have increased competition to the business inorder to standout their business.Printing business who is more reliable on technology can be at a disadvantage if they can't addapt into the new technology disruptions.
+            </p>
+        </article>
+        <!-- Blog Post 3 -->
+        <article class="article">
+            <h2><b>Conclusion</b></h2>
+            <div class="meta"></div>
+            <p>Additionally,Technology has a profound impact on our daily lives so business should learn to adapt in it.In conclusion, technology offers a lot and numerous of advantages overpowering the challenges.Balancing these negative and positive factors is important to  leverage technology effectively.</p>
+        </article>
+    </div>
+  <!-- Footer  -->
+  <footer class="section-p1">
+    <!-- Contact and Information -->
+    <div class="col">
+        <h4> Contact </h4>
+        <p> <strong>Address: </strong> Kamal Marg, Kamal Pokhari, Kathmandu, Nepal</p>
+        <p> <strong>Phone: +977 9818676501/ (+977) 01 524509</strong> </p>
+        <p> <strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+        <div class="Follow">
+            <h4> Follow us</h4>
+            <!-- social media links -->
+            <div class="icon">
+                <img src="img/Fb.png" width="30px" height="30px">
+                <img src="img/insta.png" width="30px" height="30px">
+                <img src="img/twitter.png" width="30px" height="30px">
+                <img src="img/youtube.png" width="30px" height="30px">
+            </div>
+        </div>
+    </div>
+    <!-- Links about the website and policies -->
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions </a>
+        <a href="#">Contact Us</a>
+    </div>
+    <!-- My Account section with links -->
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlists</a>
+        <a href="#">Track My Orders</a>
+        <a href="#">Help</a>
+    </div>
+    <!-- Images and information about installing the app -->
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="img/app.jpeg " height="100px" width="175px">
+           
+        </div>
+        <!-- Information about payment system -->
+        <p>Secured Payment Gateways</p>
+        <img src="img/esewa.png" height="80px" width="80px">
+    </div>
+     <!-- Copyright information -->
+    <div class="copyright">
+        <p>© 2024, The Greenery Nepal</p>
+    </div>
+</footer>
+<!-- Script tag for external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
